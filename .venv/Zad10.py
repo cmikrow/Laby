@@ -1,0 +1,10 @@
+def aub(a, b):
+    wspolne_elementy = set(a) & set(b)
+    print("Wspólne elementy:", wspolne_elementy)
+    wspolne_elementy = set(a) - set(b)
+    print("Różnica a od b elementów:", wspolne_elementy)
+    wspolne_elementy = set(a) ^ set(b)
+    print("Różnica wspólnych elementów:", wspolne_elementy)
+    wspolne_elementy = set(a) | set(b)
+    print("Wszystkie elementy:", wspolne_elementy)
+aub((1, 2, 3, 4), (3, 4, 5, 6))
