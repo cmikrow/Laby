@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var wiek = 20;
+        if(wiek>18){
+            document.write("<b>Treść dostępna wyłącznie dla pełnoletnich</b>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
