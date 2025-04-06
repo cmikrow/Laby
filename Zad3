@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function nazwaKsiazki()  {
+            ksiazka = prompt("Podaj nazwę przedmiotu");
+	        if( ksiazka == "historia" ){
+	            document.write("<b>Książka do historii</b>");
+	        }else if( ksiazka == "matematyka"){
+	            document.write("<b>Książka do matematyki</b>");
+            }else if( ksiazka == "biologia" ){
+	            document.write("<b>Podręcznik do biologi</b>");
+            }else{
+	            document.write("<b>Nieznana książka</b>");
+	        }
+        }
+    </script>
+</head>
+<body onload="nazwaKsiazki()">
+<a>ELuwina</a>
+</body>
+</html>
