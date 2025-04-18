@@ -1,13 +1,32 @@
-def wynik(i):
-    if i<5:
-        print(i,"i<5")
-        return 2
-    elif i%2==0:
-        print(i,"parzyste")
-        return wynik(i-4)+wynik(i-2)+2
+import queue
+q = queue.Queue()
+menu = 0
+while menu != 4:
+    print("menu")
+    print("1.Zarejestruj pacjenta")
+    print("2.Wywołaj pacjenta od gabinetu")
+    print("3.Podaż aktualną kolejke")
+    print("4.Zakończ działanie programu")
+    try:
+        menu = int(input("(Wybierz działanie np'1')= "))
+    except ValueError:
+        print("Błąd: niepoprawny numer")
+        continue
+    if menu == 1:
+        pacjent = input("Dodaj Pacjenta")
+        q.put(pacjent)
+        print(f"Dodano {pacjent} do kolejki")
+    elif menu == 2:
+        if q.empty():
+            print("Brak pacjentów")
+        else:
+            print("Wywołano do gabinetu ",q.get())
+    elif menu == 3:
+        if q.empty():
+            print("Pusta kolejka")
+        else:
+            print("Aktualna kolejak: ",list(q.queue))
+    elif menu == 4:
+        print("Zakończenie programu.")
     else:
-        print(i,"nieparzyste")
-        return wynik(i-2)%9
-for i in range(16):
-    print(wynik(i))
-    print("___koniec_funkcji___")
+        print("Niepoprawne dane")

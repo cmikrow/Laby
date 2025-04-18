@@ -1,9 +1,8 @@
-def druga_najwieksza(lista):
-    unikalne = list(set(lista))
-    if len(unikalne) < 2:
-        return "Ciąg musi zawierać co najmniej 2 różne liczby"
-    unikalne.sort()
-    return unikalne[-2]
-lista = [1,2,3,3,4,4]
-wynik = druga_najwieksza(lista)
-print("Druga największa liczba:",wynik)
+import queue
+print("Wprowadź 3 liczby")
+q = queue.Queue()
+for x in range(3):
+    wpiszLiczbe = input(f"Wprowadź liczbe: {x+1}: ")
+    q.put(wpiszLiczbe)
+while not q.empty():
+    print(q.get())
