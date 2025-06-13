@@ -1,7 +1,15 @@
-ulice = ["Jagodowa","Lipowa","Kiwatowa","Kasztanowa","Polna"]
-bloki = [1,2,3,4,5]
-lokale = [1,2,3,4,5,6,7,8,9,10]
-for ulica in ulice:
-    for blok in bloki:
-        for lokal in lokale:
-            print(f"{ulica} {blok} blok , {lokal} lokal")
+graf = {
+    'A': ['B'],
+    'B': ['D'],
+    'C': ['B'],
+    'D': ['A','C','E'],
+    'E': ['C']
+}
+wierzcholek = input("Wprowadź wierzchołek do sprawdzenia jego sąsiadów").upper()
+
+if wierzcholek in graf:
+    sasiedzi = graf[wierzcholek]
+    print(f"Wiechołek: {wierzcholek}")
+    print(f"Sąsiedzi: {sasiedzi}")
+else:
+    print("Niepoprawne dane")
